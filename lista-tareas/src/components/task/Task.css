@@ -3,13 +3,12 @@
     border: solid 1px white;
     border-radius: 7px;
     min-width: 30rem;
-    /* min-height: ; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
-    justify-content: center;
+    
+    display: flex; 
+    justify-content:space-between;
     align-items: center;
-    position: relative;
+    padding: 10px;
+    
 
 
 }
@@ -17,8 +16,25 @@
 
 
 .task-item__btn {
-    position: absolute;
+    /* position: absolute;
     top: 17px;
-    right: 5px;
+    right: 5px; */
 
 }
+
+
+.task-item__state{
+    margin: 0px;
+    
+}
+
+
+input[type=checkbox] {
+    transform: scale(1.9);
+  }
+
+
+
+  .task-item--complete{
+    background-color: rgb(45, 163, 45);
+  }

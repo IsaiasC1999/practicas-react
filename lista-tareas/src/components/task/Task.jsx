@@ -1,13 +1,13 @@
 import './Task.css'
 
-function Task({content,deleteTask,id}) {
+function Task({content,deleteTask,id,state,completeTask}) {
 
 
 
   return (
-    <article className="task-item">
-         
-      <p className="task-item__text">{content} {}</p>
+    <article className={`task-item ${state ? 'task-item--complete' :''}`}>
+      <input className='task-item__state' defaultChecked={state} onChange={ ()=>completeTask(id)} type="checkbox" />   
+      <p className="task-item__text">{content}</p>
       {/* <span className="task-item__date">
         {`${date.getDate()}/${date.getMonth()}`}
       </span> */}

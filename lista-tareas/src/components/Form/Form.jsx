@@ -1,3 +1,4 @@
+import "./Form.css"
 import { useState } from "react";
 
 let nun = 0;
@@ -8,7 +9,7 @@ function Form({ setListTask, listTask }) {
     function Onsubmit(e) {
 
         e.preventDefault();
-        setListTask([...listTask, { id: nun++, taskText: conten }])
+        setListTask([...listTask, { id: nun++, taskText: conten, state: false }])
         setConten('')
 
     }
