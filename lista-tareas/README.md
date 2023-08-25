@@ -1,8 +1,7 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Agregar subrayado cuando la tarea este completada. [Listo]
+- Filtrado de tareas por estado(completas y no completadas o pendientes ).  
+- Filtrar tareas por fecha(por dia y hora).
+- Filtrar por un nombre de una tarea.
+- Si se llega a determinada cantidad de tareas hacer una paginacion.
