@@ -1,12 +1,16 @@
-import { useState } from 'react'
+import {useState } from 'react'
 import './App.css'
 import Task from './components/task/Task'
 import Form from './components/Form/Form';
+import Filter from './components/Filter/Filter';
+import { listTask as initialValue } from './Mocks/TaskMock'
 
 
 function App() {
 
-  const [listTask, setListTask] = useState([]);
+  const [listTask, setListTask] = useState(initialValue);
+  // const [taskComplete, setTaskComplete] = useState([]);}
+  const [filterTask, setFilterTask] = useState({filter : 'all'});
 
 function deleteTask(id) {
       console.log(id);
@@ -15,6 +19,17 @@ function deleteTask(id) {
         ))
 
 }
+
+  function filterComplete() {
+    setListTask( listTask.filter(ele => {
+
+      if(ele.state === true)
+      {
+        return {...ele}              
+      }
+      
+        }))
+  }
 
   function onCompletetask(id) {
 
@@ -29,9 +44,25 @@ function deleteTask(id) {
       setListTask(list)
   }
 
+  function filterPendientes(){
+    setListTask( listTask.filter(ele => {
+
+      if(ele.state === false)
+      {
+        return {...ele}              
+      }
+      
+        }))
+  }
+ 
+  function filterAll(){
+      setListTask( [...listTask] )
+  }
+
   return (
     <>
       <h2 className='title-app'>Listado de Tareas</h2>
+      <Filter FilterComplete={filterComplete}  filterPendientes={filterPendientes} filterAll={filterAll} />
       <div className='conteiner'>
 
         <Form setListTask={setListTask} listTask={listTask} />
@@ -44,7 +75,6 @@ function deleteTask(id) {
           completeTask={onCompletetask}
           deleteTask={deleteTask} />)
         }
-
       </div>
     </>
   )

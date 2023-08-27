@@ -1,0 +1,20 @@
+.filter{
+    background-color: #5e3848;
+    border-radius: 7px;
+    min-height: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter__list{
+
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+
+}

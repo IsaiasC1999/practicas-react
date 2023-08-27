@@ -7,7 +7,7 @@ function Task({content,deleteTask,id,state,completeTask}) {
   return (
     <article className={`task-item ${state ? 'task-item--complete' :''}`}>
       <input className='task-item__state' defaultChecked={state} onChange={ ()=>completeTask(id)} type="checkbox" />   
-      <p className={`task-item__text ${state ?'task-item__text--complete': ''}`}>{content}</p>
+      <p className={`task-item__text ${state?'task-item__text--complete': ''}`}>{content}</p>
       {/* <span className="task-item__date">
         {`${date.getDate()}/${date.getMonth()}`}
       </span> */}
