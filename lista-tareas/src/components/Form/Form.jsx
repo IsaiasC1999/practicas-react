@@ -9,7 +9,7 @@ function Form({ setListTask, listTask }) {
     function Onsubmit(e) {
 
         e.preventDefault();
-        setListTask([...listTask, { id: nun++, taskText: conten, state: false }])
+        setListTask([...listTask, { id: nun++, taskText: conten, state: false  }])
         setConten('')
 
     }

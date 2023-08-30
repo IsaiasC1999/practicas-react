@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  /* min-width: 400px; */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #cde0bf;
@@ -21,7 +21,7 @@ html{
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -32,6 +32,7 @@ body {
   background-color: #5e3848;
   padding: 3rem;
   min-height: 6rem;
+  /* min-width: 100%; */
   border-radius: 7px;
   display: flex;
   flex-direction: column;
@@ -41,4 +42,6 @@ body {
 
 .title-app{
   color: #5e3848;
+  margin: 0px;
+  padding-top: 0px;
 }
