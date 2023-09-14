@@ -4,8 +4,9 @@
     min-height: 3rem;
     margin-bottom: 1rem;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    flex-direction: column;
 }
 
 .filter__list{
@@ -13,7 +14,7 @@
     list-style: none;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
 

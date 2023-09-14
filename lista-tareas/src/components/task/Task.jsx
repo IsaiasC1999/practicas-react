@@ -1,6 +1,6 @@
 import './Task.css'
 
-function Task({content,deleteTask,id,state,completeTask}) {
+function Task({content,deleteTask,id,state,completeTask,taskDate}) {
 
 
 
@@ -8,9 +8,7 @@ function Task({content,deleteTask,id,state,completeTask}) {
     <article className={`task-item ${state ? 'task-item--complete' :''}`}>
       <input className='task-item__state' defaultChecked={state} onChange={ ()=>completeTask(id)} type="checkbox" />   
       <p className={`task-item__text ${state?'task-item__text--complete': ''}`}>{content}</p>
-      {/* <span className="task-item__date">
-        {`${date.getDate()}/${date.getMonth()}`}
-      </span> */}
+       <span>{taskDate.format('HH:mm DD/MM ')}</span>
       <button onClick={()=>deleteTask(id)} className='task-item__btn'>Borrar</button>
     </article>
   );

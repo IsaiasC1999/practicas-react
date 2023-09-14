@@ -3,3 +3,11 @@ export const FILTER_OPTIONS={
      COMPLETE: 'complete',
      PENDING: 'pending'
 }
+
+
+export const FILTER_DATE = {
+     BEFORE: 'before',
+     AFTER:'after',
+     NOW: 'now',
+     ALL : 'all'          
+}
