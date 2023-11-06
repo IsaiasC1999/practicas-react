@@ -1,6 +1,7 @@
-import { FILTER_DATE, FILTER_OPTIONS } from "../Const/Filter";
+// import { FILTER_DATE, FILTER_OPTIONS } from "../Const/Filter";
 import { useState } from "react";
 import "./Filter.css"
+import { Button } from "@nextui-org/react";
 
 function Filter({ filterComplete, filterPending, filterAll, setDate }) {
 
@@ -13,30 +14,25 @@ function Filter({ filterComplete, filterPending, filterAll, setDate }) {
         const formJson = Object.fromEntries(formData.entries());
         console.log(formJson);
         setDate({
-            dateSelect : formJson.dateInput,
-            filterDate: formJson.selectFilterDate
+            fromDate: formJson.fromDate,
+            untilDate: formJson.untilDate
 
-        })        
+        })
     }
 
     return (
         <div className="filter">
             <ul className="filter__list">
-                <li className="filter__item"><button onClick={() => filterComplete()} >Completadas</button></li>
-                <li className="filter__item"><button onClick={() => filterPending()} >Pendientes</button></li>
-                <li className="filter__item"><button onClick={() => filterAll()}>Todas</button></li>
+                <li className="filter__item"><Button color="success" onClick={() => filterComplete()} >Completadas</Button></li>
+                <li className="filter__item"><Button color="warning" onClick={() => filterPending()} >Pendientes</Button></li>
+                <li className="filter__item"><Button color="primary" onClick={() => filterAll()}>Todas</Button></li>
             </ul>
 
             <ul className="filter__list">
                 <form onSubmit={onSubmitFormFilter}>
 
-                    <input name="dateInput" type="date" />
-                    <select name="selectFilterDate">
-                        <option value={FILTER_DATE.ALL}>Todas</option>
-                        <option value={FILTER_DATE.BEFORE}>Anteriores</option>
-                        <option value={FILTER_DATE.AFTER}>Posteriores</option>
-                        <option value={FILTER_DATE.NOW}>Exacta</option>
-                    </select>
+                    <input name="fromDate" type="date" />
+                    <input name="untilDate" type="date" />
                     <button>Buscar</button>
                 </form>
             </ul>

@@ -6,8 +6,7 @@ export const FILTER_OPTIONS={
 
 
 export const FILTER_DATE = {
-     BEFORE: 'before',
-     AFTER:'after',
-     NOW: 'now',
-     ALL : 'all'          
+     FROM: 'from',
+     UNTIL:'until',
+               
 }
