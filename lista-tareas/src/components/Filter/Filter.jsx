@@ -31,9 +31,9 @@ function Filter({ filterComplete, filterPending, filterAll, setDate }) {
             <ul className="filter__list">
                 <form onSubmit={onSubmitFormFilter}>
 
-                    <input name="fromDate" type="date" />
-                    <input name="untilDate" type="date" />
-                    <button>Buscar</button>
+                    <input className="input-date" name="fromDate" type="date" />
+                    <input className="input-date" name="untilDate" type="date" />
+                    <Button color="secondary">Buscar</Button>
                 </form>
             </ul>
         </div >

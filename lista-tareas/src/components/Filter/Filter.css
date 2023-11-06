@@ -1,5 +1,5 @@
 .filter{
-    background-color: #5e3848;
+    background-color: #3F3F46;
     border-radius: 7px;
     min-height: 3rem;
     margin-bottom: 1rem;
@@ -7,7 +7,7 @@
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    /* gap: 5px; */
     
 }
 
@@ -19,6 +19,15 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    gap: 5px;
 
 
+}
+
+
+.input-date{
+  padding: 5px;
+  gap: 10px;
+  margin: 4px;
+  border-radius: 5px;
 }

@@ -33,7 +33,7 @@ body {
 
 
 .conteiner{
-  background-color: #5e3848;
+  background-color: #3F3F46;
   padding: 3rem;
   min-height: 6rem;
   /* min-width: 100%; */
@@ -45,7 +45,10 @@ body {
 }
 
 .title-app{
-  color: #5e3848;
-  margin: 0px;
+  color: #E4E4E7;
+  margin: 10px;
+  font-size: 30px;
   padding-top: 0px;
+  font-weight: bold;
+  font-family: sans-serif;
 }
